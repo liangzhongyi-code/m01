@@ -1,1 +1,1 @@
-alert('hello world.02')
+alert('hello world.js/02')
