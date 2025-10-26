@@ -6,6 +6,11 @@
     <title>variable</title>
 </head>
 <body>
+    <label for="yearInput"></label>
+    <input type="number" id="yearInput" placeholder="輸入年份">
+    <button onclick="someCode(THIS_YEAR)">發送</button>
+
+    <p id="output"></p>
 <script>
     let admin, userName;
     userName = 'John';
@@ -19,7 +24,15 @@
     alert('currentUser:' + currentUser)
 
     const BIRTHDAY = '19.10.2025'
-    const age = someCode(birthday);
+    const THIS_YEAR = 2025
+    // const age = someCode(thisYear);
+    alert('今年:' + THIS_YEAR)
+
+    function someCode(THIS_YEAR) {
+        const inputYear = document.getElementById("yearInput").value;
+        const age = THIS_YEAR - inputYear;
+        alert('您的年齡為:' + age)
+    }
 </script>
 </body>
 </html>
