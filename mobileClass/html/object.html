@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS物件練習</title>
+</head>
+<p>JS物件練習:將輸出印在console</p>
+<body>
+
+<script>
+    let friends = [];
+    // 1. 建立一個名為 person 的物件，包含姓名、年齡、性別三個屬性
+    let friend1 = {
+        name: "小明",
+        age: 18,
+        hobbies: ['爬山', '看電影', '煮咖啡'],
+        contact: {
+        phone: '0912345678',
+        email: 'ming@example.com'
+        }
+    };
+    let friend2 = {
+        name: "小華",
+        age: 20,
+        hobbies: ['爬山', '看電影', '煮咖啡'],
+        contact: {
+        phone: '0912345678',
+        email: 'hua@example.com'
+        }
+    };
+    let friend3 = {
+        name: "小美",
+        age: 22,
+        hobbies: ['爬山', '看電影', '煮咖啡'],
+        contact: {
+        phone: '0912345678',
+        email: 'mei@example.com'
+        }
+    };
+    friends.push(friend1);
+    friends.push(friend2);
+    friends.push(friend3);
+
+    for(let f of friends){
+        console.log(f);
+    }
+    console.log(friends.length)
+    console.log(friends[1].name);
+    console.log(friends[0].hobbies[2]);
+    console.log(friends[2].contact.email);
+    friends[1].hobbies.push('游泳');
+    console.log("After push hobbies: " + friends[1].hobbies);
+</script>
+</body>
+</html>
